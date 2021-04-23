@@ -1,0 +1,21 @@
+.slider{
+    width: 95%;
+    height: 400px;
+    margin-top: 5px;
+    margin-left: 30px;
+}
+.slick-arrow{
+    background-color: rgba(66, 57, 57,0.75);
+    border-radius: 100px;
+    width: 40px;
+    height: 40px;
+}
+.slick-arrow:hover .slick-arrow:active .slick-arrow:focus {
+    background-color: rgba(16, 181, 170,0.75) !important;
+}
+.ant-row-center{
+    width: 95%;
+    margin-left: 35px;
+}
+
+

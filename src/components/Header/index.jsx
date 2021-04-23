@@ -1,19 +1,23 @@
 import React, { useState } from 'react';
 import { UserOutlined } from '@ant-design/icons';
 import { Input, Layout, Menu } from 'antd';
+
 import 'antd/dist/antd.css';
+import { Link}   from 'react-router-dom';
+
 
 import { Row, Col } from 'antd';
-import './heder.css'
+import './Header.css'
 
-const { Header, Content, Footer } = Layout;
+import { ROUTERS } from '../../constants/router';
+
+
+const { Header } = Layout;
 const onSearch = value => console.log(value);
 
 
 function HeaderPage() {
     // const [seachKey,setSeachkey]= useState('')
-
-
     return (
         <>
             <Row>
@@ -32,21 +36,24 @@ function HeaderPage() {
                             </Col>
                             <Col span={12}>
                                 <div className="menu">
-                                    <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['0']}>
-                                        <Menu.Item key="1">Home</Menu.Item>
-                                        <Menu.Item key="2">About</Menu.Item>
-                                        <Menu.Item key="3">Contact</Menu.Item>
-                                        <Menu.Item key="4">Sale</Menu.Item>
-                                        <Menu.Item key="5">Fashion</Menu.Item>
-                                        <Menu.Item key="6">Shopping</Menu.Item>
-                                    </Menu>
+                                      <ul className= "menu-cha">
+                                          <li className="menu1">
+                                              <Link to ={ROUTERS.Home}>Home</Link>
+                                          </li>
+                                          <li className="menu1">
+                                              <Link >About</Link>
+                                          </li>
+                                          <li className="menu1">
+                                              <Link >Contact</Link>
+                                          </li>
+                                      </ul>
                                 </div>
                             </Col>
                         </div>
                     </div>
                 </Header>
             </Row>
-
+            
         </>
     );
 
