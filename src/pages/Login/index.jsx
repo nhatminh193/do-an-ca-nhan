@@ -1,6 +1,11 @@
-function LoginPage(props) {
+import HeaderPage from '../../components/Header'
+
+function LoginPage() {
   return (
+    <>
+    <HeaderPage/>
     <div>Login</div>
+    </>
   );
 }
 

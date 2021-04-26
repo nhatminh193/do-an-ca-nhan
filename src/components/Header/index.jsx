@@ -1,12 +1,9 @@
 import React, { useState } from 'react';
 import { UserOutlined } from '@ant-design/icons';
-import { Input, Layout, Menu } from 'antd';
+import { Input, Layout, Row, Col, Button } from 'antd';
 
 import 'antd/dist/antd.css';
 import { Link}   from 'react-router-dom';
-
-
-import { Row, Col } from 'antd';
 import './Header.css'
 
 import { ROUTERS } from '../../constants/router';
@@ -20,39 +17,40 @@ function HeaderPage() {
     // const [seachKey,setSeachkey]= useState('')
     return (
         <>
-            <Row>
                 <Header className="headers">
                     <div className="container-fulid">
-                        <div className="header-con">
-                            <Col span={4}>
+                        <Row>
+                            <Col span={6}>
 
                                 <UserOutlined style={{ fontSize: '50px', color: '#08c' }} />
 
                             </Col>
-                            <Col span={8} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginLeft: '200px' }}>
+                            <Col className='minh' span={8}>
 
                                 <Input.Search placeholder="Nhập vào đây" onSearch={onSearch} enterButton />
 
                             </Col>
-                            <Col span={12}>
+                            <Col span={6}>
                                 <div className="menu">
                                       <ul className= "menu-cha">
                                           <li className="menu1">
-                                              <Link to ={ROUTERS.Home}>Home</Link>
+                                              <Link to ={ROUTERS.HOME}>Khách sạn</Link>
                                           </li>
                                           <li className="menu1">
-                                              <Link >About</Link>
+                                              <Link to={ROUTERS.LOGIN}>Tour</Link>
                                           </li>
                                           <li className="menu1">
-                                              <Link >Contact</Link>
+                                              <Link to={ROUTERS.REVIEW} >Giới thiệu</Link>
                                           </li>
                                       </ul>
                                 </div>
                             </Col>
-                        </div>
+                            <Col span={4}>
+                                      <Button>Tài khoản</Button>
+                                      </Col>
+                        </Row>
                     </div>
                 </Header>
-            </Row>
             
         </>
     );

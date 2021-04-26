@@ -1,5 +1,5 @@
 import React from 'react';
-import { Router, Switch} from 'react-router-dom';
+import { Route, Router, Switch} from 'react-router-dom';
 import history from './utils/history';
 import { ROUTERS } from './constants/router';
 
@@ -9,9 +9,11 @@ import HomePage from './pages/Home';
 import DetailPage from './pages/Detail';
 import LoginPage from './pages/Login';
 
+import reViewPage from './pages/Review';
+
 function BrowserRouter(props) {
   const { productList } = props;
-  console.log("🚀 ~ file: Router.jsx ~ line 14 ~ BrowserRouter ~ productList", productList)
+  
   return (
     <Router history={history}>
       <Switch>
@@ -27,6 +29,12 @@ function BrowserRouter(props) {
           exact
           path={ROUTERS.PRODUCT_DETAIL}
           component={DetailPage}
+          productList={productList}
+        />
+         <DefaultLayout
+          exact
+          path={ROUTERS.REVIEW}
+          component={reViewPage}
           productList={productList}
         />
         {/* <Route exact path="/about" component={DetailPage} />

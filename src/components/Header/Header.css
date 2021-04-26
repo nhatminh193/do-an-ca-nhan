@@ -11,3 +11,9 @@
 .menu-cha{
     display: flex;
 }
+ .minh{
+    margin-top: 15px
+}
+.ant-col-4{
+    padding-left: 125px;
+}

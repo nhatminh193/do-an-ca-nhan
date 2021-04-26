@@ -5,7 +5,8 @@ import 'antd/dist/antd.css';
 
 function DefaultLayout(props) {
   const { exact, path, component: Component, ...other } = props;
-  console.log("🚀 ~ file: index.jsx ~ line 6 ~ DefaultLayout ~ props", props)
+  console.log("🚀 ~ file: index.jsx ~ line 8 ~ DefaultLayout ~  props",  props)
+  
   return (
     <Route
       exact={exact}
@@ -18,7 +19,7 @@ function DefaultLayout(props) {
             FOOTER
           </>
         )
-        console.log("🚀 ~ file: index.jsx ~ line 21 ~ DefaultLayout ~ Component", Component)
+       
        
       }}
     />
