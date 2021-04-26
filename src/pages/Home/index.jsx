@@ -14,21 +14,22 @@ function HomePage(props) {
   
   function renderProductList() {
     return productList.map((item, index) => {
-     
       return (
         <>
-        <Row>
+        
           <Col span='8'>
           <img className="item" src={item.img}
           key={index}
           onClick={() => history.push(`/product/${item.id}`)}/>
           <h2 className="thongtin">{item.name}</h2>
           </Col>
-      </Row>
         </>
       )
     })
   }
+
+  
+  
 
   return (
     <div>
@@ -41,12 +42,16 @@ function HomePage(props) {
       >
         Go to Product list
       </Button> */}
+      <Row gutter={[8,8]}>
+
       {renderProductList()}
+      </Row>
       <ToDoListPage/>
 
     </div>
     
   );
+    
  
 }
 export default HomePage;

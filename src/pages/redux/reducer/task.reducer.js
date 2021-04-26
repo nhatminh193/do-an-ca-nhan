@@ -1,7 +1,7 @@
 
 
 const innital={
-    toDoList=[],
+    toDoList: [],
 }
 
 function taskReducer(state= innital, action){
@@ -10,7 +10,7 @@ function taskReducer(state= innital, action){
             return{
                 ...state,
                 todolist:[
-                    state.todolist,
+                    ...state.todolist,
                     action.payload
                 ]
             };
@@ -18,7 +18,7 @@ function taskReducer(state= innital, action){
         case "Edit":{
             const {index} = action.payload;
             const newTodolist = state.todolist;
-            newTodolist.slice(index,1,{title:title})
+            newTodolist.slice(index,1)
             return{
                 ...state,
                 todolist:[
@@ -30,7 +30,7 @@ function taskReducer(state= innital, action){
         case "Delete":{
             const {index} = action.payload;
             const newTodolist = state.todolist;
-            newTodolist.slice(index,1,{title:title})
+            newTodolist.slice(index,1)
             return{
                 ...state,
                 todolist:[

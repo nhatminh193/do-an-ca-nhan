@@ -58,7 +58,7 @@ function ToDoListPage(props) {
   return (
     <Row gutter={24} style={{ maxWidth: 1000, width: '100%', margin: '16px auto 0' }}>
       <Col span={8}>
-        <Card title="Add task" size="small">
+        
           <Form
             form ={form}
             layout="vertical"
@@ -83,7 +83,7 @@ function ToDoListPage(props) {
         
       
           </Form>
-        </Card>
+       
       </Col>
       <Col span={16}>
         {/* <Input.Search

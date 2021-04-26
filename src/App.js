@@ -10,7 +10,7 @@ function App() {
     },
     {
       id: 2,
-      name: "khu nghĩ dưỡng Hà Nội",
+      name: " Hà Nội",
    
       img:'https://img1.kienthucvui.vn/uploads/2019/07/19/anh-dep-ho-hoan-kiem-ve-dem_112947987.jpg',
     },
@@ -21,7 +21,7 @@ function App() {
     },
     {
       id: 4,
-      name: " Khu nghĩ dưỡng Đà nẵng",
+      name: "  Đà nẵng",
       comment:" Bãi Bắc, Bán Đảo Sơn Trà, Đà Nẵng, Việt Nam",
       img:'//cdn1.ivivu.com/iVivu/2018/09/14/14/danang_2-370x395.png',
     },
